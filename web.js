@@ -1,8 +1,8 @@
 var fs = require('fs');
 
-var express = express.createServer(express.logger());
+var express = require('express');
 
-var app = express();
+var express = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
     fs.createReadStream(__dirname + '/index.html')
