@@ -7,7 +7,7 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
     fs.createReadStream(__dirname + '/index.html')
         .once('open', function() {
-            response.writeHead(200, {'Content-type': 'text/plain'});
+            response.writeHead(200, {'Content-type': 'text/html'});
             this.pipe(response);
         })
         .once('error', function() {
